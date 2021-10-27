@@ -140,7 +140,7 @@ public class DebugInfoUtils
         if (neighborUpdateEnabled && world.isClient == false)
         {
             MinecraftClient.getInstance().execute(() -> {
-                ((NeighborUpdateDebugRenderer) MinecraftClient.getInstance().debugRenderer.neighborUpdateDebugRenderer).addNeighborUpdate(world.getTime(), pos);
+                ((NeighborUpdateDebugRenderer) MinecraftClient.getInstance().debugRenderer.neighborUpdateDebugRenderer).addNeighborUpdate(world.getTime(), pos.mutableCopy());
             });
         }
     }
